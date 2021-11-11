@@ -38,6 +38,13 @@ public class TvShowDetailsActivity extends AppCompatActivity {
     private void doInitialization() {
         //viewModel
         tvShowDetailsViewModel = new ViewModelProvider(this).get(TvShowDetailsViewModel.class);
+        // imageBackBtn
+        activityTvShowDetailsBinding.imageBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         getTvShowDetails();
     }
 
